@@ -19,16 +19,18 @@ public class Startup {
             may need to create a new class that talks to Employee. This does
             not have to be a GUI class.
         */
-        Employee employee = new Employee();
-        employee.firstName = "Peter";
-        employee.lastName = "Piper";
-        employee.ssn = "333-1234";
+        HiringEmployee e = new HiringEmployee();
+        e.setFirstName("Peter");
+        e.setLastName("Piper");
+        e.setSsn("333-1234");
+        e.setCubeId("1414");
+        System.out.println("Welcome" + " " + e.getFirstName() 
+                + " " + " First you have to meet with the HR");
+        System.out.println("Now you must meet with the Department Staff,");
+        System.out.println("Now let's set down and review the company polices....");
+        System.out.println("Finally, lets get you moved into your cubicle... your cubicle ID is:" + " " + e.getCubeId());
         
-        employee.meetDepartmentStaff();
-        employee.meetWithHrForBenefitAndSalryInfo();
-        employee.reviewDeptPolicies();
-
-        System.out.println("The employee's status is: " + employee.getStatus());
+        e.hiringProcess();
     }
     
     
